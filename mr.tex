@@ -1,0 +1,21 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage[a4paper,margin=0.5cm]{geometry}
+\usepackage{textcomp}
+
+\newcommand{\sometext}{
+sol\textbullet{}ami\textbullet{}x meerrettich fermentiert
+abgefüllt/mise en pot 23.04.23
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \foreach \i in {0,...,1} {
+        \foreach \j in {0,...,3} {
+            \node[rectangle, minimum width=8cm, minimum height=1.5cm, draw, text width=7.8cm, align=left] at (8*\i+1.5, 1.5*\j+0.75) {\sometext};
+        }
+    }
+\end{tikzpicture}
+
+\end{document}
