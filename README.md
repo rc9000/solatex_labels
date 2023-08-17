@@ -1,6 +1,5 @@
 # solamix_labels
 
-
-    # apt install texlive-base texlive-pictures pandoc
-    pdflatex ka-gonfi.tex 
-    # creates ka-gonfi.pdf
+ * .tex Datei editiere/addiere
+ * commit oder PR i däm Repo
+ * in Actions - (oberschte Itrag) - Artifacts chame es ZIP mit aune Labels als PDF abelade 
