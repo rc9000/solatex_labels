@@ -17,6 +17,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: texlive/texlive:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -25,7 +26,7 @@ jobs:
       - name: install dependencies
         run: |
           echo installing dependencies
-          sudo apt install -y texlive-base texlive-pictures pandoc
+          echo skipped sudo apt install -y texlive-base texlive-pictures pandoc
 
       - name: make pdf
         run: for x in *.tex ; do pdflatex $x ; done
