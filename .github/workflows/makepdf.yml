@@ -31,7 +31,7 @@ jobs:
       - name: install dependencies
         run: |
           echo installing dependencies
-          apt install -y texlive-base texlive-pictures pandoc
+          sudo apt install -y texlive-base texlive-pictures pandoc
 
       - name: make pdf
         run: for x in *.tex ; do pdflatex $x ; done
