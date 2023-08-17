@@ -1,4 +1,4 @@
-# solamix_labels
+# solatex_labels
 
  * .tex Datei editiere/addiere
  * commit oder PR i däm Repo
