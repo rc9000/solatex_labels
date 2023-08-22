@@ -23,17 +23,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: install dependencies
-        run: |
-          echo installing dependencies
-          echo skipped sudo apt install -y texlive-base texlive-pictures pandoc
-
       - name: make pdf
-        run: for x in *.tex ; do pdflatex $x ; done
+        run: for x in *.tex ; do pdflatex -output-directory=output $x ; done
         
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
           name: pdf-output
-          path: "*.pdf"
+          path: "output/*.pdf"
+
+      - name: Commit pdf
+        run: |
+          git config --global user.name 'Automated Workflow'
+          git config --global user.email 'devnull@users.noreply.github.com'
+          git add output/*.pdf
+          git commit -am "worflow PDF generation"
+          git push
 
