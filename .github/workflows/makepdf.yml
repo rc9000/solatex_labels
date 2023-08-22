@@ -36,7 +36,6 @@ jobs:
         run: |
           git config --global --add safe.directory /__w/solatex_labels/solatex_labels
           git config --global --add safe.directory $PWD
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git config --global user.name 'Automated Workflow'
           git config --global user.email 'devnull@users.noreply.github.com'
           git add output/*.pdf
