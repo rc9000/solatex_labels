@@ -37,7 +37,7 @@ jobs:
           git config --global --add safe.directory /__w/solatex_labels/solatex_labels
           git config --global --add safe.directory $PWD
           git config --global user.name 'Automated Workflow'
-          git config --global user.email 'devnull@users.noreply.github.com'
+          git config --global user.email 'rc9000@users.noreply.github.com'
           git add output/*.pdf
           git commit -am "worflow PDF generation"
           git push

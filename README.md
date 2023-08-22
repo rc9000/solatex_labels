@@ -2,4 +2,4 @@
 
  * .tex Datei editiere/addiere
  * commit oder PR i däm Repo
- * in Actions - (oberschte Itrag) - Artifacts chame es ZIP mit aune Labels als PDF abelade 
+ * startet outomatisch ä workflow wo d'PDF in `output` ablegt
