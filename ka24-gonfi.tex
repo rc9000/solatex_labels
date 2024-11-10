@@ -1,19 +1,27 @@
 \documentclass[a4paper]{article}
 \usepackage{tikz}
-\usepackage[a4paper,margin=0.5cm]{geometry}
+%\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=1cm, right=1cm]{geometry}
 \usepackage{textcomp}
+\pagestyle{empty}
 
 \newcommand{\sometext}{
 sol\textbullet{}ami\textbullet{}x klarapfelkonfitüre\textbar confiture de pomme transparente \\
 klarapfel, zucker, wasser, zitronensaft, zimt\textbar pomme transparente, sucre, eau, jus de citron, cannelle \\
 abgefüllt\textbar mise en pot christian@ramseyer.it\\
-mindestens haltbar bis\textbar à consommer avant le 30.07.24\\
+mindestens haltbar bis\textbar à consommer avant le 30.08.25\\
 kann auch als apfelmus gelöffelt werden\textbar peut se dégustér à la cuillère comme une compote
+}
+
+\newcommand{\phtext}{
+...
 }
 
 \newcommand{\labelw}{10.5cm}
 %\newcommand{\textw}{10.3cm}
 \newcommand{\textw}{\dimexpr\labelw-0.2cm\relax}
+%make abs(num) bigger for smaller space
+\newcommand{\phw}{\dimexpr\labelw-2.9cm\relax}
 \newcommand{\labelh}{3.0cm}
 
 % spacing labelh + cm margin
@@ -28,7 +36,8 @@ kann auch als apfelmus gelöffelt werden\textbar peut se dégustér à la cuill�
 
 \begin{tikzpicture}
     \foreach \j in {0,...,7} {
-        \node[rectangle, minimum width=\labelw, minimum height=\labelh, draw, text width=\textw, align=center] at (3cm, \spaceh*\j+\labelc) {\sometext};
+        \node[rectangle, minimum width=\labelw, minimum height=\labelh, draw, text width=\textw, align=center] at (0.2cm, \spaceh*\j+\labelc) {\sometext};
+        \node[rectangle, minimum width=1cm, minimum height=\labelh, draw, text width=1cm, align=center] at (\phw, \spaceh*\j+\labelc) {\phtext};
     }
 \end{tikzpicture}
 
